@@ -32,7 +32,7 @@ def read_nc(edr_data_path, EDR_names):
                 temp_subdataset = edr_file.variables[EDR_name]
                 if temp_subdataset is None:
                     print("The subdataset:%s don't exist." % (EDR_name))
-                    continue
+                    continue 
                 temp_subdataset = np.array(temp_subdataset)  # to numpy array
                 GROUP_DNB_EDR[EDR_name] = temp_subdataset
                 del temp_subdataset
